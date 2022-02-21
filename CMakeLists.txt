@@ -79,6 +79,7 @@ endif()
 ########################################################################
 # Find dependencies
 ########################################################################
+find_package(SSE REQUIRED)
 find_package(FFTW3F REQUIRED)
 if(FFTW3F_FOUND)
   include_directories(${FFTW3F_INCLUDE_DIRS})
@@ -135,7 +136,6 @@ ADD_C_COMPILER_FLAG_IF_AVAILABLE("-Werror=incompatible-pointer-types" HAVE_ERROR
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wno-comment -Wno-write-strings -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -fno-strict-aliasing -D_GNU_SOURCE")
 
-find_package(SSE)
 if (HAVE_AVX2)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE")
 else (HAVE_AVX2)
