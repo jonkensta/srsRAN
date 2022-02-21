@@ -27,7 +27,6 @@ add_subdirectory(phch)
 add_subdirectory(rf)
 add_subdirectory(sync)
 add_subdirectory(utils)
-add_subdirectory(channel)
 add_subdirectory(dft)
 add_subdirectory(io)
 add_subdirectory(modem)
@@ -44,7 +43,6 @@ set(srsran_srcs     $<TARGET_OBJECTS:srsran_agc>
         $<TARGET_OBJECTS:srsran_phch>
         $<TARGET_OBJECTS:srsran_sync>
         $<TARGET_OBJECTS:srsran_utils>
-        $<TARGET_OBJECTS:srsran_channel>
         $<TARGET_OBJECTS:srsran_dft>
         $<TARGET_OBJECTS:srsran_io>
         $<TARGET_OBJECTS:srsran_modem>
