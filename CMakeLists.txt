@@ -53,7 +53,6 @@ configure_file(
 ########################################################################
 # Options
 ########################################################################
-option(ENABLE_SRSLOG_TRACING "Enable event tracing using srslog"        OFF)
 option(ASSERTS_ENABLED       "Enable srsRAN asserts"                    ON)
 option(STOP_ON_WARNING       "Interrupt application on warning"         OFF)
 
@@ -63,10 +62,6 @@ if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64")
 else(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64")
   set(GCC_ARCH native CACHE STRING "GCC compile for specific architecture.")
 endif(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64")
-
-if (ENABLE_SRSLOG_TRACING)
-  add_definitions(-DENABLE_SRSLOG_EVENT_TRACE)
-endif (ENABLE_SRSLOG_TRACING)
 
 if (ASSERTS_ENABLED)
   add_definitions(-DASSERTS_ENABLED)
