@@ -74,7 +74,17 @@ endif()
 ########################################################################
 # Find dependencies
 ########################################################################
+find_package(Python3 COMPONENTS Interpreter Development NumPy)
+include_directories(${Python3_INCLUDE_DIRS})
+include_directories(${Python3_NumPy_INCLUDE_DIRS})
+
+cmake_policy(SET CMP0078 NEW)
+cmake_policy(SET CMP0086 NEW)
+find_package(SWIG 4.0 COMPONENTS python REQUIRED)
+include(${SWIG_USE_FILE})
+
 find_package(SSE REQUIRED)
+
 find_package(FFTW3F REQUIRED)
 if(FFTW3F_FOUND)
   include_directories(${FFTW3F_INCLUDE_DIRS})
