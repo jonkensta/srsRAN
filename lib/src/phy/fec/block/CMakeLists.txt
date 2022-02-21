@@ -21,5 +21,3 @@
 set(FEC_SOURCES ${FEC_SOURCES}
         block/block.c
         PARENT_SCOPE)
-
-add_subdirectory(test)

@@ -20,5 +20,3 @@
 
 file(GLOB SOURCES "*.c")
 add_library(srsran_ue OBJECT ${SOURCES})
-
-add_subdirectory(test)

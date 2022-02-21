@@ -20,4 +20,3 @@
 
 file(GLOB SOURCES "*.c")
 add_library(srsran_ch_estimation OBJECT ${SOURCES})
-add_subdirectory(test)

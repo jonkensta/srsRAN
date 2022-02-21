@@ -20,4 +20,3 @@
 
 file(GLOB SOURCES "*.c")
 add_library(srsran_sync OBJECT ${SOURCES})
-add_subdirectory(test)

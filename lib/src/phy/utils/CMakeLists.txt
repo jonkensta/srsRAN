@@ -24,5 +24,3 @@ add_library(srsran_utils OBJECT ${SOURCES})
 if(VOLK_FOUND)
   set_target_properties(srsran_utils PROPERTIES COMPILE_DEFINITIONS "${VOLK_DEFINITIONS}")
 endif(VOLK_FOUND)
-
-add_subdirectory(test)

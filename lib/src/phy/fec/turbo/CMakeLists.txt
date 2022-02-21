@@ -28,5 +28,3 @@ set(FEC_SOURCES ${FEC_SOURCES}
         turbo/turbodecoder_gen.c
         turbo/turbodecoder_sse.c
         PARENT_SCOPE)
-
-add_subdirectory(test)

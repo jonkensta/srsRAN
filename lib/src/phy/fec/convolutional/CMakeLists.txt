@@ -28,5 +28,3 @@ set(FEC_SOURCES ${FEC_SOURCES}
         convolutional/viterbi37_port.c
         convolutional/viterbi37_sse.c
         PARENT_SCOPE)
-
-add_subdirectory(test)
