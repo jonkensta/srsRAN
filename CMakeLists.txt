@@ -111,13 +111,6 @@ set(INCLUDE_DIR include)
 set(DOC_DIR "share/doc/${CPACK_PACKAGE_NAME}")
 set(DATA_DIR share/${CPACK_PACKAGE_NAME})
 
-# Auto-generate config install helper and mark for installation
-configure_file(
-        ${PROJECT_SOURCE_DIR}/cmake/modules/SRSRAN_install_configs.sh.in
-        ${CMAKE_BINARY_DIR}/srsran_install_configs.sh
-)
-install(PROGRAMS ${CMAKE_BINARY_DIR}/srsran_install_configs.sh DESTINATION ${RUNTIME_DIR})
-
 # Disables the project to build when calling "make install"
 set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY TRUE)
 
